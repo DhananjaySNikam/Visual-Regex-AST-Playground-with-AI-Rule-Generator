@@ -1,0 +1,44 @@
+{
+  "name": "visual-regex-ast-playground",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n web,api -c cyan,magenta \"vite\" \"npm:dev:api\"",
+    "dev:web": "vite",
+    "dev:api": "NODE_OPTIONS=--experimental-sqlite tsx watch server/index.ts",
+    "build": "vite build",
+    "start": "NODE_OPTIONS=--experimental-sqlite tsx server/index.ts",
+    "serve": "npm run build && npm start",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "@xyflow/react": "^12.3.6",
+    "express": "^4.21.2",
+    "monaco-editor": "^0.52.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsx": "^4.19.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "jsdom": "^25.0.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "description": "Visual Regex & AST Playground: React Flow node graph, Monaco editor, hover-synced corpus highlight, linear-time Pike-VM matching in a Web Worker, drag-and-drop pattern builder, AI rule generator, zstd share links and a 24h-TTL SQLite store."
+}
