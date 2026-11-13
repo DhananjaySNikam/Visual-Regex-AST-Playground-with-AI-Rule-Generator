@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+playground.sqlite*
+.env
+.env.local
+scratch/
+.DS_Store
+*.log
